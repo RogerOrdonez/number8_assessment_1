@@ -10,17 +10,17 @@ export const apiClient = axios.create({
   },
 });
 
-export const fetchRealEstateItems = async (): Promise<PropertiesResponse> => {
+export const fetchProperties = async (): Promise<PropertiesResponse> => {
   try {
     const response = await apiClient.get<ApiProperty[]>("listings.json");
-    const realEstateItems = response.data.map((remoteRealEstateItem) =>
-      PropertyMapper.fromApiProperty(remoteRealEstateItem)
+    const properties = response.data.map((property) =>
+      PropertyMapper.fromApiProperty(property)
     );
-    const realEstateItemsResponse: PropertiesResponse = {
-      data: realEstateItems,
+    const propertiesResponse: PropertiesResponse = {
+      data: properties,
       error: null,
     };
-    return realEstateItemsResponse;
+    return propertiesResponse;
   } catch (error) {
     if (error instanceof Error) {
       return {
