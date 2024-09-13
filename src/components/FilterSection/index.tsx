@@ -46,7 +46,10 @@ export const FilterSection = ({
           priceRange={properties?.priceRange}
         />
       </div>
-      <Button className="w-1/2 lg:w-28 self-start" onClick={onHandleSearch}>
+      <Button
+        className="w-full lg:w-28 self-center lg:self-start"
+        onClick={onHandleSearch}
+      >
         Search
       </Button>
     </div>

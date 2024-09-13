@@ -17,8 +17,8 @@ export const CustomRangeSlider = ({
   priceRange,
 }: CustomRangeSliderProps) => {
   return (
-    <div className="flex space-x-4 items-center w-1/2 lg:w-full">
-      <p className="sm:w-1/5 lg:w-[140px]">Price Range:</p>
+    <div className="mt-8 lg:mt-0 flex space-x-4 items-center lg:mr-5 w-full lg:w-full justify-center">
+      <p className="w-[90px] lg:w-[100px]">Price Range:</p>
       <DualRangeSlider
         label={label}
         defaultValue={[priceRange.min, priceRange.max]}
@@ -27,6 +27,7 @@ export const CustomRangeSlider = ({
         max={priceRange.max}
         step={1000}
         onValueChange={(value) => setValues(value)}
+        className="w-[210px] lg:w-[200px]"
       />
     </div>
   );

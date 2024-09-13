@@ -15,10 +15,10 @@ export const CustomSelect = ({
   value,
 }: CustomSelectProps) => {
   return (
-    <div className="flex space-x-4 items-center mr-5 w-1/2 lg:w-full">
-      <p className="sm:w-1/5 lg:w-[70px]">{label}:</p>
+    <div className="flex space-x-4 items-center mr-5 w-full lg:w-full justify-center">
+      <p className="w-1/5 lg:w-[70px]">{label}:</p>
       <Select onValueChange={setValue} value={value}>
-        <SelectTrigger className="w-[200px]">
+        <SelectTrigger className="w-3/5 lg:w-[200px]">
           <SelectValue />
         </SelectTrigger>
         <SelectContent>
